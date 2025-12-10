@@ -1,0 +1,149 @@
+{
+    "startPassageId": "ACT1_START",
+    "passages": [
+        {
+            "id": "ACT1_START",
+            "bg": "act1_palace_fire",
+            "text": "The palace burns behind you.\n\nYour half-brother has seized the throne, declaring you a traitor before the court can even protest.\n\nYou carry only the last royal banner and a few loyal survivors.\n\nIf you die here, the kingdom dies with you.",
+            "choices": [
+                {
+                    "label": "Search the ruined storehouse for supplies",
+                    "nextId": "ACT1_SUPPLIES_FOUND",
+                    "suppliesDelta": 1
+                },
+                {
+                    "label": "Flee immediately before the patrols return",
+                    "nextId": "ACT1_SUPPLIES_SKIPPED",
+                    "suppliesDelta": 0
+                }
+            ]
+        },
+        {
+            "id": "ACT1_SUPPLIES_FOUND",
+            "bg": "act1_forest_or_road",
+            "text": "You force open a collapsed door and find a small cache of food and bandages.\n\nIt isn’t much, but it’s enough to keep your people moving.\n\nEvery scrap matters now.",
+            "choices": [
+                {
+                    "label": "Continue",
+                    "nextId": "ACT1_ROUTE_CHOICE"
+                }
+            ]
+        },
+        {
+            "id": "ACT1_SUPPLIES_SKIPPED",
+            "bg": "act1_forest_or_road",
+            "text": "You resist the urge to search.\n\nA delay could be fatal.\n\nYou lead your survivors into the night with empty hands and a heavy banner.",
+            "choices": [
+                {
+                    "label": "Continue",
+                    "nextId": "ACT1_ROUTE_CHOICE"
+                }
+            ]
+        },
+        {
+            "id": "ACT1_ROUTE_CHOICE",
+            "bg": "act1_forest_or_road",
+            "text": "Two roads stretch into darkness.\n\nOne is slower and safer. The other is fast—but watched.",
+            "choices": [
+                {
+                    "label": "Take the forest path",
+                    "nextId": "ACT1_ROUTE_A"
+                },
+                {
+                    "label": "Follow the coastal road",
+                    "nextId": "ACT1_ROUTE_B"
+                }
+            ]
+        },
+        {
+            "id": "ACT1_ROUTE_A",
+            "bg": "act1_forest_or_road",
+            "text": "The forest swallows your footsteps.\n\nYou move quietly, avoiding torchlight and steel.\n\nYour people are exhausted, but alive.",
+            "choices": [
+                {
+                    "label": "Continue",
+                    "nextId": "ACT1_MORAL_CHOICE"
+                }
+            ]
+        },
+        {
+            "id": "ACT1_ROUTE_B",
+            "bg": "act1_forest_or_road",
+            "text": "The coastal road is faster, but open.\n\nA distant patrol passes close enough for you to hear their armor.\n\nYou hold your breath until the night swallows them.",
+            "choices": [
+                {
+                    "label": "Continue",
+                    "nextId": "ACT1_MORAL_CHOICE"
+                }
+            ]
+        },
+        {
+            "id": "ACT1_MORAL_CHOICE",
+            "bg": "act1_forest_or_road",
+            "text": "Near a burned village, survivors emerge from the ruins.\n\nThey recognize the banner.\n\n\"My lord… please. We have nowhere left to go.\"\n\nYour supplies are thin. Your future is thinner.",
+            "choices": [
+                {
+                    "label": "Share what you can and take them with you",
+                    "nextId": "ACT1_MERCY_OUTCOME",
+                    "mercyDelta": 1,
+                    "suppliesDelta": -1
+                },
+                {
+                    "label": "Refuse. You cannot risk the banner for strangers",
+                    "nextId": "ACT1_FEAR_OUTCOME",
+                    "fearDelta": 1,
+                    "suppliesDelta": 0
+                }
+            ]
+        },
+        {
+            "id": "ACT1_MERCY_OUTCOME",
+            "bg": "act1_forest_or_road",
+            "text": "You split your supplies and offer protection.\n\nThe survivors join your group, shaken but grateful.\n\nWord travels fast in desperate lands.\n\nTonight, your banner becomes a promise.",
+            "choices": [
+                {
+                    "label": "Continue",
+                    "nextId": "ACT1_ENDING_SETUP"
+                }
+            ]
+        },
+        {
+            "id": "ACT1_FEAR_OUTCOME",
+            "bg": "act1_forest_or_road",
+            "text": "You turn them away.\n\nYour followers say nothing, but the silence feels heavier than steel.\n\nThe banner survives the night—but your name begins to harden into rumor.\n\nTonight, your banner becomes a warning.",
+            "choices": [
+                {
+                    "label": "Continue",
+                    "nextId": "ACT1_ENDING_SETUP"
+                }
+            ]
+        },
+        {
+            "id": "ACT1_ENDING_SETUP",
+            "bg": "act1_frontier_dawn",
+            "text": "Dawn breaks over the frontier.\n\nA stretch of wild land lies ahead—untamed, quiet, and far from your half-brother’s reach.\n\nThis could be a refuge.\n\nOr the first stone of a kingdom reborn.",
+            "choices": [
+                {
+                    "label": "Raise the banner",
+                    "nextId": "ACT1_RAISE_BANNER_CHECK"
+                }
+            ]
+        },
+        {
+            "id": "ACT1_RAISE_BANNER_CHECK",
+            "bg": "act1_frontier_dawn",
+            "text": "Your people look to you for direction.\n\nThe banner is more than cloth now.\n\nIt is a vow.\n\nWhatever kind of king you become… starts here.",
+            "choices": [
+                {
+                    "label": "Begin the settlement",
+                    "nextId": "ACT1_COMPLETE"
+                }
+            ]
+        },
+        {
+            "id": "ACT1_COMPLETE",
+            "bg": "act1_frontier_dawn",
+            "text": "ACT 1 COMPLETE\n\nYou survived the fall.\n\nYour half-brother still rules the old throne.\n\nBut here, on the frontier, the last banner rises again.\n\nThe war will come.\n\nThe question is what kind of king will face it."
+        }
+    ]
+}
